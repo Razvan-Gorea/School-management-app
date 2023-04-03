@@ -12,7 +12,7 @@ export function Degrees(){
 
     return (
         <div>
-            <h1>All Degrees Information</h1>
+            <h1>All Degrees</h1>
             {data.map(item => (
                 <li key={item.shortcode}>{item.full_name} - {item.shortcode}</li>
             ))}
