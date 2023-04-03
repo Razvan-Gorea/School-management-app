@@ -33,19 +33,19 @@ function App() {
   
   <Routes>
     <Route path="/" element={<Home />}/>
-    <Route path="/degrees" element={<Degrees />}></Route>
-    <Route path="/degree/:name" element={<SingleDegree />}></Route>
-    <Route path="/cohorts" element={<Cohorts />}></Route>
-    <Route path="/modules" element={<AllModules />}></Route>
-    <Route path="/modules_for_cohort/:name" element={<ModuleForCohort />}></Route>
-    <Route path="/module/:name" element={<SingleModule />}></Route>
-    <Route path="/cohort/:name" element={<SingleCohort />}></Route>
-    <Route path="/student/:ID" element={<IndividualStudent />}></Route>
-    <Route path="/create_degree" element={<CreateDegree />}></Route>
-    <Route path="/create_cohort" element={<CreateCohort />}></Route>
-    <Route path="/create_module" element={<CreateModule />}></Route>
+    <Route path="/degrees" element={<Degrees />}></Route>{/*  Done */}
+    <Route path="/degree/:shortcode" element={<SingleDegree />}></Route>{/*  TODO */}
+    <Route path="/cohorts" element={<Cohorts />}></Route>{/*  Done */}
+    <Route path="/modules" element={<AllModules />}></Route>{/*  TODO */}
+    <Route path="/modules_for_cohort/:placeholder" element={<ModuleForCohort />}></Route>{/*  TODO */}
+    <Route path="/module/:code" element={<SingleModule />}></Route>{/*  TODO */}
+    <Route path="/cohort/:id" element={<SingleCohort />}></Route>{/*  TODO */}
+    <Route path="/student/:student_id" element={<IndividualStudent />}></Route>{/*  TODO */}
+    <Route path="/create_degree" element={<CreateDegree />}></Route>{/*  TODO */}
+    <Route path="/create_cohort" element={<CreateCohort />}></Route>{/*  TODO */}
+    <Route path="/create_module" element={<CreateModule />}></Route>{/*  TODO */}
     <Route path="/create_student" element={<CreateStudent />}></Route>
-    <Route path="/set_student_grade/:ID/:module_name" element={<SetStudentsGrades />}></Route>
+    <Route path="/set_student_grade/:placeholder1/:placeholder2" element={<SetStudentsGrades />}></Route>{/*  TODO */}
   </Routes>
   
   </>
