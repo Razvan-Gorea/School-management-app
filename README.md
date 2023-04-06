@@ -71,9 +71,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### TO DO
 
-- [x] Create the required Urls
-- [ ] Do all the GET Requests
-- [ ] Do all the POST REQUEST with the forms
+- [ ] A page to view all degrees
+- [ ] A page to view a single degree (all cohorts of the degree should be displayed on this page)
+- [ ] A page to create a degree
+- [ ] A page to view all cohorts
+- [ ] A page to view a single cohort (all students of the cohort should be displayed on this page)
+- [ ] A page to create a cohort
+- [ ] A page to view all modules
+- [ ] A page to view a single module
+- [ ] A page to view all modules to be delivered to a cohort
+- [ ] A page to create a module
+- [ ] A page to view a single student
+- [ ] A page to create a student
+- [ ] A page to set the students grades for a module
 - [ ] Style the project with a css framework
 - [ ] Record the video to accompany the react project
 - [ ] Upload the Zip with a txt file with a link to the video along with the project code
