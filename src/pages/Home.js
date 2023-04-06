@@ -8,11 +8,11 @@ export function Home(){
             <li>/degree/[INSERT_DEGREE_SHORTCODE]/</li>
             <li>/create_degree/</li>
             <li>/cohorts/</li>
-            <li>/cohort/[INSERT_PLACEHOLDER]/</li>
+            <li>/cohort/[INSERT_COHORT_ID]/</li>
             <li>/create_cohort/</li>
             <li>/modules/</li>
-            <li>/module/[INSERT_PLACEHOLDER]/</li>
-            <li>/modules_for_cohort/[INSERT_PLACEHOLDER]/</li>
+            <li>/module/[INSERT_MODULE_CODE]/</li>
+            <li>/modules_for_cohort/[INSERT_COHORT_ID]/</li>
             <li>/create_module/</li>
             <li>/student/[INSERT_STUDENT_PLACEHOLDER]/</li>
             <li>/create_student/</li>

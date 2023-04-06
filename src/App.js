@@ -37,10 +37,10 @@ function App() {
     <Route path="/degree/:shortcode/" element={<SingleDegree />}></Route>{/*  DONE */}
     <Route path="/cohorts/" element={<Cohorts />}></Route>{/*  DONE */}
     <Route path="/modules/" element={<AllModules />}></Route>{/*  DONE */}
-    <Route path="/modules_for_cohort/:placeholder/" element={<ModuleForCohort />}></Route>{/*  TODO */}
-    <Route path="/module/:placeholder/" element={<SingleModule />}></Route>{/*  TODO */}
+    <Route path="/modules_delivered_to_cohort/:id/" element={<ModuleForCohort />}></Route>{/*  TODO */}
+    <Route path="/module/:module_code/" element={<SingleModule />}></Route>{/*  TODO */}
     <Route path="/cohort/:id/" element={<SingleCohort />}></Route>{/*  TODO */}
-    <Route path="/student/:placeholder/" element={<IndividualStudent />}></Route>{/*  TODO */}
+    <Route path="/student/:student_id/" element={<IndividualStudent />}></Route>{/*  TODO */}
     <Route path="/create_degree/" element={<CreateDegree />}></Route>{/*  TODO */}
     <Route path="/create_cohort/" element={<CreateCohort />}></Route>{/*  TODO */}
     <Route path="/create_module/" element={<CreateModule />}></Route>{/*  TODO */}

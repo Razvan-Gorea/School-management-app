@@ -27,6 +27,30 @@ export function SingleCohort(){
 
     return (
         <div>
+            {data &&
+          data.map((item) => (
+            <div>
+              <h2 key={item.id}>
+                Cohort Name: {item.name} <br></br>
+                Year: {item.year}
+              </h2>
+            </div>
+          ))}
+
+          {students && students.map((student) => (
+          <div>
+            <p key={student.student_id}>
+              Student ID: {student.student_id}
+              <br />
+              First Name: {student.first_name}
+              <br />
+              Last Name: {student.last_name}
+              <br />
+              Email: {student.email}
+            </p>
+          </div>
+        ))}
+
         </div>
     );
 
