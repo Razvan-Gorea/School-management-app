@@ -1,5 +1,81 @@
-export function CreateCohort(){
-    return <div>
-        <h1>Placeholder4</h1>
-    </div>
+import React, { useEffect, useState } from 'react';
+
+
+export function CreateCohort() {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        
+        fetch('http://127.0.0.1:8000/api/degree/')
+            .then(response => response.json())
+            .then(data => setData(data));
+    }, []);
+
+    const handleSubmit = (event) => {
+        if (event) {
+            event.preventDefault();
+            const id = event.target.id;
+            const year = event.target.year;
+            const degree = event.target.degree;
+            const name = event.target.name;
+
+            const caller = "http://127.0.0.1:8000/api/cohort/"
+
+            const cohort = {
+                id: String(id.value),
+                year: parseInt(year.value),
+                name: String(name.value),
+                degree: "http://127.0.0.1:8000/api/degree/" + String(degree[degree.selectedIndex].value) + "/",
+            }
+
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(cohort)
+            };
+
+            fetch(caller, requestOptions)
+                .then(response => response.json())
+                .then(data => console.log(data));
+
+        }
+    };
+
+    return (
+        <div>
+            <form onSubmit={(event) => handleSubmit(event)}>
+                <div>
+                    <label htmlFor="id"/>
+                    <input type="text" id="id" name="id" placeholder="ID" required/>
+                </div>
+                <div>
+                    <br></br>
+                    <label htmlFor="year"/>
+                    <input type="number" id="year" name="year" placeholder="Year" required/>
+                </div>
+                <div>
+                    <br></br>
+                    <label htmlFor="name"/>
+                    <input type="text" id="name" name="name" placeholder="Name" required/>
+                </div>
+                <div>
+                    <br></br>
+                    <label htmlFor="degree"/>
+                    
+                        {data !== null ?
+                                <select id="degree" name="degree" required>
+                                    {data.map((degree) => (
+                                        <option key={degree.id} value={degree.shortcode} >{degree.full_name}</option>
+                                    ))} 
+                                </select>
+                        : null}
+                    
+                </div>
+                <div>
+                    <br></br>
+                    <button type="submit">Create Cohort</button>
+                </div>
+            </form>
+        </div>
+    )
 }

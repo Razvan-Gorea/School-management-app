@@ -73,10 +73,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 - [x] A page to view all degrees
 - [x] A page to view a single degree (all cohorts of the degree should be displayed on this page)
-- [ ] A page to create a degree
+- [x] A page to create a degree
 - [x] A page to view all cohorts
 - [x] A page to view a single cohort (all students of the cohort should be displayed on this page)
-- [ ] A page to create a cohort
+- [x] A page to create a cohort
 - [x] A page to view all modules
 - [x] A page to view a single module
 - [x] A page to view all modules to be delivered to a cohort
