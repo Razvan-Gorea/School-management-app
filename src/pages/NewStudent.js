@@ -25,7 +25,7 @@ export function CreateStudent() {
             first_name: String(first_name.value),
             last_name: String(last_name.value),
             email: String(email.value),
-            cohort: 'http://127.0.0.1:8000/api/student/' + String(cohort[cohort.selectedIndex].value) + '/',
+            cohort: "http://127.0.0.1:8000/api/student/" + String(cohort[cohort.selectedIndex].value) + "/",
     }
 
     console.log(student);
