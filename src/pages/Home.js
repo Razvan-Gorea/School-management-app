@@ -1,7 +1,8 @@
 export function Home(){
     return <div>
         <h1>Home</h1>
-        <h2>Use the existing urls or the nav bar above to get to your desired destination</h2>
+        <br></br>
+        <h3>Use the existing urls or the nav bar above to get to your desired destination</h3>
         <h3>Existing Urls:</h3>
         <ul>
             <li>/degrees/</li>
@@ -16,7 +17,7 @@ export function Home(){
             <li>/create_module/</li>
             <li>/student/[INSERT_STUDENT_PLACEHOLDER]/</li>
             <li>/create_student/</li>
-            <li>/set_student_grade/[INSERT_PLACEHOLDER]/</li>
+            <li>/set_student_grade/</li>
         </ul>
         </div>
 

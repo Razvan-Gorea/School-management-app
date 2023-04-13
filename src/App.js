@@ -28,6 +28,7 @@ function App() {
       <li><Link to="/create_cohort/">Create Cohort</Link></li>
       <li><Link to="/create_module/">Create Module</Link></li>
       <li><Link to="/create_student/">Create Student</Link></li>
+      <li><Link to="/set_student_grade/">Set Student Grade</Link></li>
     </ul>
   </nav>
   
@@ -45,7 +46,7 @@ function App() {
     <Route path="/create_cohort/" element={<CreateCohort />}></Route>{/*  TODO */}
     <Route path="/create_module/" element={<CreateModule />}></Route>{/*  TODO */}
     <Route path="/create_student/" element={<CreateStudent />}></Route>
-    <Route path="/set_student_grade/:placeholder/" element={<SetStudentsGrades />}></Route>{/*  TODO */}
+    <Route path="/set_student_grade/" element={<SetStudentsGrades />}></Route>{/*  TODO */}
   </Routes>
   
   </>
