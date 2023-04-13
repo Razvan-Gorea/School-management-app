@@ -49,7 +49,9 @@ export function CreateCohort() {
         <div>
             <form onSubmit={(event) => handleSubmit(event)}>
                 <div>
-                    <br></br>
+                    <div>
+                        <h3>Enter details for a new cohort:</h3>
+                    </div>
                     <label htmlFor="id"/>
                     <input type="text" id="id" name="id" placeholder="ID" required/>
                 </div>

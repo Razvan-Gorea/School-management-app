@@ -16,7 +16,9 @@ export function CreateStudent() {
     <div>
         <form>
             <div>
-                <br></br>
+                <h3>Enter details for a new student:</h3>
+            </div>
+            <div>
                 <input type="text" name="student_id" placeholder="Student's ID" required/>
             </div>
             <div>
@@ -29,6 +31,12 @@ export function CreateStudent() {
             </div>
             <div>
                 <br></br>
+                <input type="text" name="email" placeholder="Student's Email" required/>
+            </div>
+            <div>
+                <p>Choose a cohort for the new student:</p>
+            </div>
+            <div>
                 {data !== null ?
                                 <select id="cohort" name="cohort" required>
                                     {data.map((cohort) => (
@@ -36,6 +44,10 @@ export function CreateStudent() {
                                     ))} 
                                 </select>
                         : null}
+            </div>
+            <div>
+                <br></br>
+                <button type='submit'>Create Student</button>
             </div>
             </form>
     </div>

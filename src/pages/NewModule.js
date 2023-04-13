@@ -58,8 +58,7 @@ export function CreateModule(){
             <form onSubmit={(event) => handleSubmit(event)}>
                 <div>
                     <div>
-                        <br></br>
-                        <h3>Insert New Module Details:</h3>
+                        <h3>Enter new module details:</h3>
                     </div>
                     <label htmlFor="code"/>
                     <input type="text" id="code" name="code" placeholder="Module Code" required/>

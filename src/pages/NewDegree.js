@@ -32,7 +32,7 @@ export function CreateDegree(){
 
   return (
     <form onSubmit={handleSubmit}>
-      <br></br><br></br>
+      <h3>Enter details for a new degree:</h3>
       <label>
         <input type="text" name="full_name" value={formData.full_name} onChange={handleChange} placeholder='Degree Full Name' required/>
       <br></br>
@@ -43,7 +43,7 @@ export function CreateDegree(){
       <br></br>
       </label>
       <br></br>
-      <button type="submit">Submit</button>
+      <button type="submit">Create Degree</button>
     </form>
   );
 };
