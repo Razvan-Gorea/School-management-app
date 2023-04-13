@@ -34,12 +34,12 @@ export function CreateDegree(){
     <form onSubmit={handleSubmit}>
       <br></br><br></br>
       <label>
-        <input type="text" name="full_name" value={formData.full_name} onChange={handleChange} placeholder='Degree Full Name'/>
+        <input type="text" name="full_name" value={formData.full_name} onChange={handleChange} placeholder='Degree Full Name' required/>
       <br></br>
       <br></br>
       </label>
       <label>
-        <input type="text" name="shortcode" value={formData.shortcode} onChange={handleChange} placeholder='Degree Shortcode'/>
+        <input type="text" name="shortcode" value={formData.shortcode} onChange={handleChange} placeholder='Degree Shortcode' required/>
       <br></br>
       </label>
       <br></br>
