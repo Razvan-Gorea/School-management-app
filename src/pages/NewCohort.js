@@ -39,12 +39,17 @@ export function CreateCohort() {
                 .then(data => console.log(data));
 
         }
+        else{
+            console.log("Error")
+        }
+    window.location.reload();
     };
 
     return (
         <div>
             <form onSubmit={(event) => handleSubmit(event)}>
                 <div>
+                    <br></br>
                     <label htmlFor="id"/>
                     <input type="text" id="id" name="id" placeholder="ID" required/>
                 </div>
@@ -56,10 +61,12 @@ export function CreateCohort() {
                 <div>
                     <br></br>
                     <label htmlFor="name"/>
-                    <input type="text" id="name" name="name" placeholder="Name" required/>
+                    <input type="text" id="name" name="name" placeholder="Full Name For Cohort" required/>
                 </div>
                 <div>
-                    <br></br>
+                    <p>Cohort Belongs To: </p>
+                </div>
+                <div>
                     <label htmlFor="degree"/>
                     
                         {data !== null ?

@@ -1,5 +1,96 @@
+import React, { useState, useEffect } from 'react';
+
 export function CreateModule(){
-    return <div>
-        <h1>Placeholder5</h1>
-    </div>   
+    const [data, setData] = useState(null);
+    const [cohorts, setCohorts] = useState([]);
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/api/cohort/')
+            .then(response => response.json())
+            .then(data => setData(data));
+    }, []);
+
+    const handleCohort = (event) => {
+        const cohort = event.target.value;
+        if (event.target.checked) {
+            setCohorts([...cohorts, cohort]);
+        } else {
+            setCohorts(cohorts.filter((c) => c !== cohort));
+        }
+    };
+
+    const handleSubmit = (event) => {
+        if (event) {
+            event.preventDefault();
+            const code = event.target.code;
+            const full_name = event.target.full_name;
+            const ca_split = event.target.ca_split;
+
+            const Module = {
+                code: String(code.value),
+                full_name: String(full_name.value),
+                ca_split: parseInt(ca_split.value),
+                delivered_to: cohorts.map((cohort) => "http://127.0.0.1:8000/api/cohort/" + cohort + "/"),
+            };
+
+            const caller = "http://127.0.0.1:8000/api/module/"
+
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(Module)
+            };
+
+            fetch(caller, requestOptions)
+                .then(response => response.json())
+                .then(data => console.log(data));
+
+        
+    }
+    else {
+        console.log("Error")
+    }
+    };
+    
+    return (
+
+        <div>
+            <form onSubmit={(event) => handleSubmit(event)}>
+                <div>
+                    <br></br>
+                    <label htmlFor="code"/>
+                    <input type="text" id="code" name="code" placeholder="Module Code" required/>
+                </div>
+                <div>
+                    <br></br>
+                    <label htmlFor="full_name"/>
+                    <input type="text" id="full_name" name="full_name" placeholder="Module Full Name" required/>
+                </div>
+                <div>
+                    <br></br>
+                    <label htmlFor="ca_split"/>
+                    <input type="number" id="ca_split" name="ca_split" placeholder="Module CA Split" required/>
+                </div>
+                <div>
+                    <br></br>
+                    <p>Module to be delivered to:</p>
+                    {data !== null ? (
+                    <div>
+                        {data.map((cohort) => (
+                        <div key={cohort.id}>
+                            <input type="checkbox" id={cohort.id} name="cohort" value={cohort.id} checked={cohorts.includes(cohort.id)} onChange={handleCohort}/>
+                            <label htmlFor={cohort.id}>{cohort.name}</label>
+        </div>
+      ))}
+    </div>
+  ) : null}
+                </div>
+                <div>
+                    <br></br>
+                    <button type="submit">Create Module</button>
+                </div>
+            </form>
+        </div>
+
+    )
 }
