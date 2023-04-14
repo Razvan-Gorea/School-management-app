@@ -45,7 +45,7 @@ export function CreateModule(){
                 .then(response => response.json())
                 .then(data => console.log(data));
 
-        
+        window.location.reload();
     }
     else {
         console.log("Error")

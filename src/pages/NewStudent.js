@@ -25,10 +25,25 @@ export function CreateStudent() {
             first_name: String(first_name.value),
             last_name: String(last_name.value),
             email: String(email.value),
-            cohort: "http://127.0.0.1:8000/api/student/" + String(cohort[cohort.selectedIndex].value) + "/",
+            cohort: "http://127.0.0.1:8000/api/cohort/" + String(cohort[cohort.selectedIndex].value) + "/",
     }
+    
+    const caller = "http://127.0.0.1:8000/api/student/"
 
-    console.log(student);
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(student)
+    };
+
+    fetch(caller, requestOptions)
+        .then(response => response.json())
+        .then(data => console.log(data));
+    
+    window.location.reload();
+}
+else {
+    console.log("Error")
 }
   };
   return (
