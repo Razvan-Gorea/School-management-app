@@ -16,7 +16,7 @@ export function Degrees(){
             <br></br>
             <div className='list-group'>
             {data.map(item => (
-                <p key={item.shortcode} className='list-group-item border-0 shadow rounded-0'>{item.full_name} - {item.shortcode}<br></br><br></br></p>
+                <p key={item.shortcode} className='list-group-item border-0 shadow rounded-0'><br/>{item.full_name} - {item.shortcode}<br></br><br></br></p>
             ))}
             </div>
             </div>

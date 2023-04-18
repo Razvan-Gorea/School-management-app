@@ -16,15 +16,16 @@ export function SingleModule(){
 
     }, [module_code]);
 
-    return <div>
+    return <div className='my-5 shadow-lg rounded-3 w-30 p-5'>
+
         {data &&
           data.map((item) => (
             <div>
-              <h4 key={item.code}>
-                Module Name: {item.full_name} <br></br>
-                Module Code: {item.code}<br></br>
-                Continous Assessment Split: {item.ca_split}<br></br>
-              </h4>
+              <p key={item.code}>
+                Module Name - {item.full_name} <br></br>
+                Module Code - {item.code}<br></br>
+                Continuous Assessment Split - {item.ca_split}<br></br>
+              </p>
             </div>
           ))}
     </div>

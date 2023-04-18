@@ -30,33 +30,39 @@ export function SingleDegree() {
       <div>
         {data &&
           data.map((item) => (
-            <div>
+            <div className="my-5 shadow-lg rounded-3 p-5">
               {/*Render degree name*/}
               <h2 key={item.shortcode}>
                 {item.full_name} - {item.shortcode}
               </h2>
               {/*Render degree name and shortcode*/}
-              <p key={item.shortcode}>Degree Name: {item.full_name}</p>
-              <p key={item.shortcode}>Degree Shortcode: {item.shortcode}</p>
+              <br/>
+              <div className="list-group">
+              <p key={item.shortcode} className="list-group-item border-0 shadow rounded-0"><br/>Degree Name - {item.full_name} <br/>Degree Shortcode - {item.shortcode}<br/><br/></p>
+              </div>
               {/*Render a heading for associated cohorts*/}
-              <h2>Cohorts</h2>
             </div>
           ))}
         
-        
+        <div className="my-5 shadow-lg rounded-3 p-5">
+        <h2>Cohorts</h2>
+        <br/>
+        <div className="list-group">
         {courses && courses.map((course) => (
           <div>
-            <p key={course.id}>
+            <p key={course.id} className="list-group-item border-0 shadow rounded-0">
               {/*Render the associated cohort details*/}
-              Cohort ID: {course.id}
+              Cohort ID - {course.id}
               <br />
-              Cohort Name: {course.name}
+              Cohort Name - {course.name}
               <br />
-              Year: {course.year}
+              Year - {course.year}
               <br />
             </p>
           </div>
         ))}
+        </div>
+        </div>
       </div>
     );
 }

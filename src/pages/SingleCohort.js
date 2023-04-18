@@ -26,31 +26,31 @@ export function SingleCohort(){
     }, [id]);
 
     return (
-        <div>
+        <div className='my-5 shadow-lg rounded-3 w-50 p-5'>
             {data &&
           data.map((item) => (
             <div>
-              <h2 key={item.id}>
-                Cohort Name: {item.name} <br></br>
-                Year: {item.year}
-              </h2>
+              <h2 key={item.id} className='my-2'>
+                Cohort - {item.name} <br></br>
+                Year - {item.year}
+              </h2><br/>
             </div>
           ))}
-
+          <div className='list-group'>
           {students && students.map((student) => (
           <div>
-            <p key={student.student_id}>
-              Student ID: {student.student_id}
+            <p key={student.student_id} className='list-group-item border-0 shadow rounded-0'>
+              <br/>Student ID - {student.student_id}
               <br />
-              First Name: {student.first_name}
+              First Name - {student.first_name}
               <br />
-              Last Name: {student.last_name}
+              Last Name - {student.last_name}
               <br />
-              Email: {student.email}
+              Email - {student.email}<br/><br/>
             </p>
           </div>
         ))}
-
+        </div>
         </div>
     );
 

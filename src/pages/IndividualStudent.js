@@ -25,24 +25,27 @@ export function IndividualStudent() {
 
   return (
     <div>
-    <div>
-      <h4>
-        Student ID: {data.student_id} <br />
-        First Name: {data.first_name} <br />
-        Last Name: {data.last_name} <br />
-        Email: {data.email} <br />
-      </h4>
+    <div className='my-5 shadow-lg rounded-3 p-5'>
+      <h6>
+        Student ID - {data.student_id} <br />
+        First Name - {data.first_name} <br />
+        Last Name - {data.last_name} <br />
+        Email - {data.email} <br />
+      </h6>
     </div>
-    <div>
-      <h3>Grades for Modules:</h3>
+    <div className='my-5 shadow-lg rounded-3 p-5'>
+      <br/>
+      <h6>Grades for Modules:</h6>
+      <div className='list-group'>
         {grades.map((grade) => (
-          <p key={grade.id}>
-            Module: {grade.module}<br></br>
-            CA Mark: {grade.ca_mark}<br></br>
-            Exam Mark: {grade.exam_mark}<br></br>
-            Total Grade: {grade.total_grade}<br></br>
+          <p key={grade.id} className='list-group-item border-0 shadow rounded-0'>
+            Module - {grade.module.split("/").slice(-2, -1)}<br></br>
+            CA Mark - {grade.ca_mark}<br></br>
+            Exam Mark - {grade.exam_mark}<br></br>
+            Total Grade - {grade.total_grade}<br></br>
           </p>
         ))}
+        </div>
       </div>
     </div>
   );
