@@ -52,6 +52,7 @@ function App() {
     <Route path="/create_module/" element={<CreateModule />}></Route>{/*  TODO */}
     <Route path="/create_student/" element={<CreateStudent />}></Route>
     <Route path="/set_student_grade/" element={<SetStudentsGrades />}></Route>{/*  TODO */}
+    <Route path="*" element={<h1>404: Not Found</h1>}></Route>
   </Routes>
   
   </>
