@@ -53,17 +53,17 @@ export function CreateCohort() {
                         <h3>Enter details for a new cohort:</h3>
                     </div>
                     <label htmlFor="id"/>
-                    <input type="text" id="id" name="id" placeholder="ID" required/>
+                    <input type="text" id="id" name="id" placeholder="Cohort ID" required/>
                 </div>
                 <div>
                     <br></br>
                     <label htmlFor="year"/>
-                    <input type="number" id="year" name="year" placeholder="Year" required/>
+                    <input type="number" id="year" name="year" placeholder="Cohort Year" required/>
                 </div>
                 <div>
                     <br></br>
                     <label htmlFor="name"/>
-                    <input type="text" id="name" name="name" placeholder="Full Name For Cohort" required/>
+                    <input type="text" id="name" name="name" placeholder="Full Cohort Name" required/>
                 </div>
                 <div>
                     <p>Cohort Belongs To: </p>

@@ -38,10 +38,12 @@ export function CreateDegree(){
       <br></br>
       <br></br>
       </label>
+      <br></br>
       <label>
         <input type="text" name="shortcode" value={formData.shortcode} onChange={handleChange} placeholder='Degree Shortcode' required/>
       <br></br>
       </label>
+      <br></br>
       <br></br>
       <button type="submit">Create Degree</button>
     </form>

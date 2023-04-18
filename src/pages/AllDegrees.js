@@ -11,11 +11,14 @@ export function Degrees(){
     },[]);
 
     return (
-        <div>
-            <h1>All Degrees</h1>
+        <div className='my-5 shadow-lg rounded-3 w-50 p-5'>
+            <h1 className='my-2'>Degrees</h1>
+            <br></br>
+            <div className='list-group'>
             {data.map(item => (
-                <li key={item.shortcode}>{item.full_name} - {item.shortcode}</li>
+                <p key={item.shortcode} className='list-group-item border-0 shadow rounded-0'>{item.full_name} - {item.shortcode}<br></br><br></br></p>
             ))}
+            </div>
             </div>
     );
     }

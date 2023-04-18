@@ -18,19 +18,24 @@ function App() {
   return (
   <>
   
-  <nav>
-    <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/degrees/">All Degrees</Link></li>
-      <li><Link to="/cohorts/">All Cohorts</Link></li>
-      <li><Link to="/modules/">All Modules</Link></li>
-      <li><Link to="/create_degree/">Create Degree</Link></li>
-      <li><Link to="/create_cohort/">Create Cohort</Link></li>
-      <li><Link to="/create_module/">Create Module</Link></li>
-      <li><Link to="/create_student/">Create Student</Link></li>
-      <li><Link to="/set_student_grade/">Set Student Grade</Link></li>
+  <nav className="navbar navbar-expand-lg bg-body-tertiary rounded-3 mt-0 my-">
+    <div className="container-fluid">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li className="nav-item mx-1 my-auto"><Link to="/" className="nav-link active" aria-current="page">Home</Link></li>
+      <li className="nav-item mx-1 my-auto"><Link to="/degrees/" className="nav-link active" aria-current="page">All Degrees</Link></li>
+      <li className="nav-item mx-1 my-auto"><Link to="/cohorts/" className="nav-link active" aria-current="page">All Cohorts</Link></li>
+      <li className="nav-item mx-1 my-auto"><Link to="/modules/" className="nav-link active" aria-current="page">All Modules</Link></li>
+      <li className="nav-item mx-1 my-auto"><Link to="/create_degree/" className="nav-link active" aria-current="page">Create Degree</Link></li>
+      <li className="nav-item mx-1 my-auto"><Link to="/create_cohort/" className="nav-link active" aria-current="page">Create Cohort</Link></li>
+      <li className="nav-item mx-1 my-auto"><Link to="/create_module/" className="nav-link active" aria-current="page">Create Module</Link></li>
+      <li className="nav-item mx-1 my-auto"><Link to="/create_student/" className="nav-link active" aria-current="page">Create Student</Link></li>
+      <li className="nav-item mx-1 my-auto"><Link to="/set_student_grade/" className="nav-link active" aria-current="page">Set Student Grade</Link></li>
     </ul>
-  </nav>
+    </div>
+  </nav> 
+  
+  <br/>
+
   
   <Routes>
     <Route path="/" element={<Home />}/>

@@ -13,8 +13,9 @@ export function Cohorts(){
     
     
     return <Fragment>
-    <div>
-        <h1>All Cohorts</h1>
+    <div className='my-5'>
+        <h1>Cohorts</h1>
+        <br></br>
         {data.map(item => (
             <p key={item.id}>Cohort ID:{item.id}<br></br>
             Cohort Name: {item.name} <br></br>
