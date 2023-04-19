@@ -29,7 +29,6 @@ function App() {
       <li className="nav-item mx-1 my-auto"><Link to="/create_cohort/" className="nav-link active" aria-current="page">Create Cohort</Link></li>
       <li className="nav-item mx-1 my-auto"><Link to="/create_module/" className="nav-link active" aria-current="page">Create Module</Link></li>
       <li className="nav-item mx-1 my-auto"><Link to="/create_student/" className="nav-link active" aria-current="page">Create Student</Link></li>
-      <li className="nav-item mx-1 my-auto"><Link to="/set_student_grade/" className="nav-link active" aria-current="page">Set Student Grade</Link></li>
     </ul>
     </div>
   </nav> 
@@ -51,7 +50,7 @@ function App() {
     <Route path="/create_cohort/" element={<CreateCohort />}></Route>{/*  TODO */}
     <Route path="/create_module/" element={<CreateModule />}></Route>{/*  TODO */}
     <Route path="/create_student/" element={<CreateStudent />}></Route>
-    <Route path="/set_student_grade/" element={<SetStudentsGrades />}></Route>{/*  TODO */}
+    <Route path="/grade/:grade_id/" element={<SetStudentsGrades />}></Route>{/*  TODO */}
     <Route path="*" element={<h1>404: Not Found</h1>}></Route>
   </Routes>
   

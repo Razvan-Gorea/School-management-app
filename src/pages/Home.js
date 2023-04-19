@@ -20,7 +20,7 @@ export function Home(){
                 <p className="list-group-item border-0 shadow rounded-0"><br/>create_module/<br></br><br></br></p>
                 <p className="list-group-item border-0 shadow rounded-0"><br/>student/[INSERT_STUDENT_ID]/<br></br><br></br></p>
                 <p className="list-group-item border-0 shadow rounded-0"><br/>create_student/<br></br><br></br></p>
-                <p className="list-group-item border-0 shadow rounded-0"><br/>set_student_grade/<br></br><br></br></p>
+                <p className="list-group-item border-0 shadow rounded-0"><br/>grade/[INSERT_GRADE_ID]<br></br><br></br></p>
                 </div>
          </div>
          </div>
