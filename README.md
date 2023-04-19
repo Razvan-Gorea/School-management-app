@@ -80,10 +80,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [x] A page to view all modules
 - [x] A page to view a single module
 - [x] A page to view all modules to be delivered to a cohort
-- [ ] A page to create a module
+- [x] A page to create a module
 - [x] A page to view a single student
-- [ ] A page to create a student
-- [ ] A page to set the students grades for a module
-- [ ] Style the project with a css framework
-- [ ] Record the video to accompany the react project
-- [ ] Upload the Zip with a txt file with a link to the video along with the project code
+- [x] A page to create a student
+- [x] A page to set the students grades for a module
+- [x] Style the project with a css framework
+- [x] Record the video to accompany the react project
+- [x] Upload the Zip with a txt file with a link to the video along with the project code
