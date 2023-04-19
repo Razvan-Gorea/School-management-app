@@ -31,22 +31,23 @@ export function CreateDegree(){
   };
 
   return (
+    <div>
+    <div className='my-5 shadow-lg rounded-3 p-5'>
     <form onSubmit={handleSubmit}>
-      <h3>Enter details for a new degree:</h3>
-      <label>
-        <input type="text" name="full_name" value={formData.full_name} onChange={handleChange} placeholder='Degree Full Name' required/>
-      <br></br>
-      <br></br>
-      </label>
-      <br></br>
-      <label>
-        <input type="text" name="shortcode" value={formData.shortcode} onChange={handleChange} placeholder='Degree Shortcode' required/>
-      <br></br>
-      </label>
-      <br></br>
-      <br></br>
-      <button type="submit">Create Degree</button>
+      <h4>Enter details for a new degree:</h4>
+      <div className='mb-3'>
+      <label htmlFor='full_name' className='form-label'/>
+      <input type="text" id="full_name" name="full_name" value={formData.full_name} onChange={handleChange} placeholder='Degree Full Name' className='form-control' required/>
+      </div>
+      <div className='mb-3'>
+      <label htmlFor='shortcode'/>
+        <input type="text" id="full_name" name="shortcode" value={formData.shortcode} onChange={handleChange} placeholder='Degree Shortcode' className='form-control' required/>
+      </div>
+      <br/>
+      <button type="submit" className='btn btn-primary btn-lg'>Create Degree</button>
     </form>
+    </div>
+    </div>
   );
 };
 

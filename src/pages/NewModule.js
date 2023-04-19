@@ -53,35 +53,31 @@ export function CreateModule(){
     };
     
     return (
-
-        <div>
+        <div className='my-5 shadow-lg rounded-3 p-5 w-30'>
             <form onSubmit={(event) => handleSubmit(event)}>
-                <div>
+                <div className='mb-3'>
                     <div>
-                        <h3>Enter new module details:</h3>
+                        <h4>Enter new module details:</h4>
                     </div>
-                    <label htmlFor="code"/>
-                    <input type="text" id="code" name="code" placeholder="Module Code" required/>
+                    <label htmlFor="code" className='form-label'/>
+                    <input type="text" id="code" name="code" placeholder="Module Code" className='form-control' required/>
+                </div>
+                <div className='mb-3'>
+                    <label htmlFor="full_name" className='form-label'/>
+                    <input type="text" id="full_name" name="full_name" placeholder="Module Full Name" className='form-control' required/>
+                </div>
+                <div className='mb-3'>
+                    <label htmlFor="ca_split" className='form-label'/>
+                    <input type="number" id="ca_split" name="ca_split" placeholder="Module CA Split" className='form-control' required/>
                 </div>
                 <div>
-                    <br></br>
-                    <label htmlFor="full_name"/>
-                    <input type="text" id="full_name" name="full_name" placeholder="Module Full Name" required/>
-                </div>
-                <div>
-                    <br></br>
-                    <label htmlFor="ca_split"/>
-                    <input type="number" id="ca_split" name="ca_split" placeholder="Module CA Split" required/>
-                </div>
-                <div>
-                    <br></br>
-                    <p>Module to be delivered to:</p>
+                    <h4>Module to be delivered to:</h4>
                     {data !== null ? (
                     <div>
                         {data.map((cohort) => (
-                        <div key={cohort.id}>
-                            <input type="checkbox" id={cohort.id} name="cohort" value={cohort.id} checked={cohorts.includes(cohort.id)} onChange={handleCohort}/>
-                            <label htmlFor={cohort.id}>{cohort.name}</label>
+                        <div key={cohort.id} className='form-check'>
+                            <label htmlFor={cohort.id} className='form-check-label'>{cohort.name}</label>
+                            <input type="checkbox" id={cohort.id} name="cohort" value={cohort.id} checked={cohorts.includes(cohort.id)} onChange={handleCohort} className='form-check-input'/>
         </div>
       ))}
     </div>
@@ -89,7 +85,7 @@ export function CreateModule(){
                 </div>
                 <div>
                     <br></br>
-                    <button type="submit">Create Module</button>
+                    <button type="submit" className='btn btn-primary btn-lg'>Create Module</button>
                 </div>
             </form>
         </div>

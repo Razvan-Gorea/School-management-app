@@ -46,34 +46,34 @@ export function CreateCohort() {
     };
 
     return (
-        <div>
+        <div className='my-5 shadow-lg rounded-3 p-5'>
             <form onSubmit={(event) => handleSubmit(event)}>
                 <div>
                     <div>
-                        <h3>Enter details for a new cohort:</h3>
+                        <h4>Enter details for a new cohort:</h4>
                     </div>
-                    <label htmlFor="id"/>
-                    <input type="text" id="id" name="id" placeholder="Cohort ID" required/>
+                    <div  className="mb-3">
+                    <label htmlFor="id" className='form-label'/>
+                    <input type="text" id="id" name="id" placeholder="Cohort ID" className='form-control' required/>
+                    </div>
+                </div>
+                <div className='mb-3'>
+                    <label htmlFor="year" className='form-label'/>
+                    <input type="number" id="year" name="year" placeholder="Cohort Year"  className='form-control' required/>
+                </div>
+                <div className='mb-3'>
+                    <label htmlFor="name" className='form-label'/>
+                    <input type="text" id="name" name="name" placeholder="Full Cohort Name" className='form-control' required/>
                 </div>
                 <div>
                     <br></br>
-                    <label htmlFor="year"/>
-                    <input type="number" id="year" name="year" placeholder="Cohort Year" required/>
-                </div>
-                <div>
-                    <br></br>
-                    <label htmlFor="name"/>
-                    <input type="text" id="name" name="name" placeholder="Full Cohort Name" required/>
-                </div>
-                <div>
-                    <br></br>
-                    <p>Cohort Belongs To: </p>
+                    <h4>Cohort Belongs To: </h4>
                 </div>
                 <div>
                     <label htmlFor="degree"/>
                     
                         {data !== null ?
-                                <select id="degree" name="degree" required>
+                                <select id="degree" name="degree" className='form-select' required>
                                     {data.map((degree) => (
                                         <option key={degree.id} value={degree.shortcode} >{degree.full_name}</option>
                                     ))} 
@@ -83,9 +83,9 @@ export function CreateCohort() {
                 </div>
                 <div>
                     <br></br>
-                    <button type="submit">Create Cohort</button>
+                    <button type="submit" className='btn btn-primary btn-lg'>Create Cohort</button>
                 </div>
             </form>
-        </div>
+            </div>
     )
 }

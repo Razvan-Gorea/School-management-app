@@ -47,33 +47,31 @@ else {
 }
   };
   return (
-    <div>
+    <div className='my-5 shadow-lg rounded-3 p-5 w-30'>
         <form onSubmit={(event) => handleSubmit(event) }>
             <div>
-                <h3>Enter details for a new student:</h3>
+                <h4>Enter details for a new student:</h4><br/>
+            </div>
+            <div className='mb-3'>
+                <input type="text" id="student_id" name="student_id" placeholder="Student's ID" className='form-control' required/>
+            </div>
+            <div className='mb-3'>
+                <input type="text" id="first_name" name="first_name" placeholder="Student's First Name" className='form-control' required/>
+            </div>
+            <div className='mb-3'>
+                <input type="text" id="last_name" name="last_name" placeholder="Student's Last Name" className='form-control' required/>
+            </div>
+            <div className='mb-3'>
+                <input type="text" id="email" name="email" placeholder="Student's Email" className='form-control' required/>
             </div>
             <div>
-                <input type="text" id="student_id" name="student_id" placeholder="Student's ID" required/>
-            </div>
-            <div>
-                <br></br>
-                <input type="text" id="first_name" name="first_name" placeholder="Student's First Name" required/>
-            </div>
-            <div>
-                <br></br>
-                <input type="text" id="last_name" name="last_name" placeholder="Student's Last Name" required/>
-            </div>
-            <div>
-                <br></br>
-                <input type="text" id="email" name="email" placeholder="Student's Email" required/>
-            </div>
-            <div>
-                <br></br>
-                <p>Choose a cohort for the new student:</p>
+                <br/>
+                <h4>Choose a cohort for the new student:</h4>
+                <br/>
             </div>
             <div>
                 {data !== null ?
-                                <select id="cohort" name="cohort" required>
+                                <select id="cohort" name="cohort" className='form-select' required>
                                     {data.map((cohort) => (
                                         <option key={cohort.id} value={cohort.id} >{cohort.name}</option>
                                     ))} 
@@ -82,7 +80,7 @@ else {
             </div>
             <div>
                 <br></br>
-                <button type='submit'>Create Student</button>
+                <button type='submit' className='btn btn-primary btn-lg' >Create Student</button>
             </div>
             </form>
     </div>

@@ -37,27 +37,24 @@ export function SetStudentsGrades(){
 };
 
     return (
-        <div>
+        <div className="my-5 shadow-lg rounded-3 p-5 w-30">
         <form onSubmit={(event) => handleSubmit(event)}>
             <div>
-                <h3>Modify a student's grade:</h3>
+                <h4>Modify a student's grade:</h4>
                 <p>(The grade must already exist to be modified)</p>
             </div>
-            <div>
-                <br></br>
-                <input type="number" id="ca_mark" name="ca_mark" placeholder="CA Mark" required/>
+            <div className="mb-3"> 
+                <input type="number" id="ca_mark" name="ca_mark" placeholder="CA Mark" className="form-control" required/>
+            </div>
+            <div className="mb-3">
+                <input type="number" id="exam_mark" name="exam_mark" placeholder="Exam Mark" className="form-control" required/>
+            </div>
+            <div className="mb-3">
+                <input type="number" id="total_grade" name="total_grade" placeholder="Total Grade" className="form-control" required/>
             </div>
             <div>
                 <br></br>
-                <input type="number" id="exam_mark" name="exam_mark" placeholder="Exam Mark" required/>
-            </div>
-            <div>
-                <br></br>
-                <input type="number" id="total_grade" name="total_grade" placeholder="Total Grade" required/>
-            </div>
-            <div>
-                <br></br>
-                <button type='submit'>Modify grade</button>
+                <button type='submit' className="btn btn-primary btn-lg">Modify grade</button>
             </div>
             </form>
     </div>
