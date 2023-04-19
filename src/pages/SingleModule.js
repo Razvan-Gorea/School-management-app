@@ -16,7 +16,7 @@ export function SingleModule(){
 
     }, [module_code]);
 
-    return <div className='my-5 shadow-lg rounded-3 w-30 p-5'>
+    return <div className='my-5 shadow-lg rounded-3 w-30 p-5 w-50'>
 
         {data &&
           data.map((item) => (

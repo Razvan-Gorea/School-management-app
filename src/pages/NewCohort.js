@@ -66,6 +66,7 @@ export function CreateCohort() {
                     <input type="text" id="name" name="name" placeholder="Full Cohort Name" required/>
                 </div>
                 <div>
+                    <br></br>
                     <p>Cohort Belongs To: </p>
                 </div>
                 <div>

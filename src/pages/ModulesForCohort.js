@@ -14,14 +14,15 @@ export function ModuleForCohort(){
             .catch((error) => console.log(error));
     }, [id]);
 
-    return (<div>
+    return (<div className="my-5 shadow-lg rounded-3 p-5 w-50">
+        <h3>Cohort - {id}</h3>
         {data && data.map((item) => (
-            <div>
-                <h4 key={item.code}>
-                    Module Code: {item.code} <br></br>
-                    Module Name: {item.full_name} <br></br>
-                    Continous Assessment Split: {item.ca_split} <br></br>
-                </h4>
+            <div className="list-group">
+                <p key={item.code} className="list-group-item border-0 shadow rounded-0">
+                    <br/><br/>Module Code - {item.code} <br></br>
+                    Module Name - {item.full_name} <br></br>
+                    Continous Assessment Split - {item.ca_split}<br/><br/>
+                </p>
                 </div>
                 ))}
         </div>

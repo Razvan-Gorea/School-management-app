@@ -68,6 +68,7 @@ else {
                 <input type="text" id="email" name="email" placeholder="Student's Email" required/>
             </div>
             <div>
+                <br></br>
                 <p>Choose a cohort for the new student:</p>
             </div>
             <div>
