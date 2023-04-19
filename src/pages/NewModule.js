@@ -71,7 +71,9 @@ export function CreateModule(){
                     <input type="number" id="ca_split" name="ca_split" placeholder="Module CA Split" className='form-control' required/>
                 </div>
                 <div>
+                    <br/>
                     <h4>Module to be delivered to:</h4>
+                    <br/>
                     {data !== null ? (
                     <div>
                         {data.map((cohort) => (
